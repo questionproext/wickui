@@ -1,17 +1,17 @@
 {
   "name": "@sifat160/wickui",
   "private": false,
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "A React UI library for building web applications with ease.",
   "type": "module",
-  "main": "./dist/umd/index.js",
-  "module": "./dist/es/index.es.js",
+  "main": "./dist/wickui/umd/index.js",
+  "module": "./dist/wickui/es/index.es.js",
   "types": "./dist/index.d.ts",
   "exports": {
     ".": {
       "types": "./dist/index.d.ts",
-      "import": "./dist/es/index.es.js",
-      "require": "./dist/umd/index.js"
+      "import": "./dist/wickui/es/index.es.js",
+      "require": "./dist/wickui/umd/index.js"
     },
     "./dist/style.css": "./dist/style.css"
   },
