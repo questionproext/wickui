@@ -1,6 +1,6 @@
 {
   "name": "@sifat160/wickui",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "A React UI library for building web applications with ease.",
   "type": "module",
   "main": "./dist/cjs/index.js",
@@ -49,5 +49,10 @@
     "tailwindcss": "^3.4.4",
     "typescript": "^5.2.2",
     "vite": "^5.3.1"
+  },
+  "peerDependencies": {
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "tailwindcss": "^3.4.4"
   }
 }
