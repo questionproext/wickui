@@ -20,7 +20,7 @@ export const WuButton: React.FC<IWuButtonProps> = ({
   variant = EWuButtonVariant.PRIMARY,
   size = EWuButtonSize.MD,
   icon,
-  iconPosition,
+  iconPosition = EWuButtonIconPosition.LEFT,
   children,
   ...props
 }) => {

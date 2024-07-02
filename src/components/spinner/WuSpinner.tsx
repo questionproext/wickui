@@ -45,6 +45,7 @@ export const WuSpinner: React.FC<IWuSpinnerProps> = ({
         className={spinnerClasses}
         style={{...parentStyle, ...style}}
         aria-label={ariaLabel}
+        role="spinner"
       >
         <span className={styles.dot} style={{...childStyle}}></span>
         <span className={styles.dot} style={{...childStyle}}></span>
