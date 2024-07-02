@@ -11,15 +11,6 @@ export default defineConfig({
   },
   build: {
     sourcemap: true,
-    terserOptions: {
-      compress: {
-        drop_console: true,
-        dead_code: true,
-      },
-      format: {
-        comments: true,
-      },
-    },
     lib: {
       entry: "src/index.ts",
       name: "WickUI",
