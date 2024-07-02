@@ -1,5 +1,5 @@
 export enum WuButtonSizeEnum {
-  SM = "sm",
-  MD = "md",
-  LG = "lg",
+  SM = 'sm',
+  MD = 'md',
+  LG = 'lg',
 }

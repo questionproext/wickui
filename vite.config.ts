@@ -1,11 +1,11 @@
-import react from "@vitejs/plugin-react";
-import path from "path";
-import tailwindcss from "tailwindcss";
-import { defineConfig } from "vite";
-import dts from "vite-plugin-dts";
-import { name } from "./package.json";
+import react from '@vitejs/plugin-react'
+import path from 'path'
+import tailwindcss from 'tailwindcss'
+import {defineConfig} from 'vite'
+import dts from 'vite-plugin-dts'
+import {name} from './package.json'
 
-const formattedName = name.match(/[^/]+$/)?.[0] ?? name;
+const formattedName = name.match(/[^/]+$/)?.[0] ?? name
 export default defineConfig({
   plugins: [
     react(),
@@ -15,7 +15,7 @@ export default defineConfig({
   ],
   resolve: {
     alias: {
-      "@": path.resolve(__dirname, "./src"),
+      '@': path.resolve(__dirname, 'src'),
     },
   },
   css: {
@@ -26,21 +26,21 @@ export default defineConfig({
   build: {
     sourcemap: true,
     lib: {
-      entry: path.resolve(__dirname, "src/index.ts"),
+      entry: path.resolve(__dirname, 'src/index.ts'),
       name: formattedName,
-      fileName: (format) => `${formattedName}/${format}/index.js`,
-      formats: ["es", "umd"],
+      fileName: format => `${formattedName}/${format}/index.js`,
+      formats: ['es', 'umd'],
     },
     rollupOptions: {
-      external: ["react", "react/jsx-runtime", "react-dom", "tailwindcss"],
+      external: ['react', 'react/jsx-runtime', 'react-dom', 'tailwindcss'],
       output: {
         globals: {
-          react: "React",
-          "react/jsx-runtime": "react/jsx-runtime",
-          "react-dom": "ReactDOM",
-          tailwindcss: "tailwindcss",
+          react: 'React',
+          'react/jsx-runtime': 'react/jsx-runtime',
+          'react-dom': 'ReactDOM',
+          tailwindcss: 'tailwindcss',
         },
       },
     },
   },
-});
+})

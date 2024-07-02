@@ -1,0 +1,73 @@
+.spinner {
+  width: 4em;
+  height: 1em;
+  display: inline-block;
+  font-size: 12px;
+  position: relative;
+}
+
+.message {
+  display: inline-block;
+  margin-left: 8px;
+}
+
+.dot {
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  position: absolute;
+  animation-duration: 0.5s;
+  animation-timing-function: ease;
+  animation-iteration-count: infinite;
+  background: #fff;
+  -webkit-border-radius: 0.5em;
+  -moz-border-radius: 0.5em;
+  border-radius: 0.5em;
+  z-index: 2;
+}
+
+.dot:nth-child(1) {
+  animation-name: reveal;
+  left: 0;
+}
+
+.dot:nth-child(2) {
+  animation-name: slide;
+  left: 0;
+}
+
+.dot:nth-child(3) {
+  animation-name: slide;
+  left: 1.5em;
+}
+
+.dot:nth-child(4) {
+  animation-name: reveal;
+  animation-direction: reverse;
+  left: 3em;
+}
+
+@keyframes reveal {
+  from {
+    -webkit-transform: scale(0.001);
+    -moz-transform: scale(0.001);
+    -ms-transform: scale(0.001);
+    -o-transform: scale(0.001);
+  }
+
+  to {
+    -webkit-transform: scale(1);
+    -moz-transform: scale(1);
+    -ms-transform: scale(1);
+    -o-transform: scale(1);
+  }
+}
+
+@keyframes slide {
+  to {
+    -webkit-transform: translateX(1.5em);
+    -moz-transform: translateX(1.5em);
+    -ms-transform: translateX(1.5em);
+    -o-transform: translateX(1.5em);
+  }
+}

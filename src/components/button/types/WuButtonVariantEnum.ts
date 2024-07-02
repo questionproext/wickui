@@ -1,6 +1,6 @@
 export enum WuButtonVariantEnum {
-  PRIMARY = "primary",
-  SECONDARY = "secondary",
-  OUTLINE = "outline",
-  LINK = "link",
+  PRIMARY = 'primary',
+  SECONDARY = 'secondary',
+  OUTLINE = 'outline',
+  LINK = 'link',
 }
