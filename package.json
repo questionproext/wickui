@@ -1,11 +1,12 @@
 {
   "name": "@sifat160/wickui",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "A React UI library for building web applications with ease.",
   "type": "module",
   "main": "./dist/index.umd.js",
   "module": "./dist/index.es.js",
   "license": "MIT",
+  "access": "public",
   "scripts": {
     "dev": "vite",
     "build": "tsc -b && vite build",
