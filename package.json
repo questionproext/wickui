@@ -1,6 +1,6 @@
 {
   "name": "@sifat160/wickui",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "A React UI library for building web applications with ease.",
   "type": "module",
   "main": "./dist/cjs/index.js",

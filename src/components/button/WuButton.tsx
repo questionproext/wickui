@@ -1,4 +1,4 @@
-import { Button } from "@/ui/button";
+import { Button } from "../../ui/button";
 import { WuButtonSizeEnum } from "./types/WuButtonSizeEnum";
 import { WuButtonVariantEnum } from "./types/WuButtonVariantEnum";
 export interface IWuButtonProps
