@@ -17,6 +17,8 @@ const options: Partial<IStory> = {
   args: {
     variant: WuButtonVariantEnum.PRIMARY,
     size: WuButtonSizeEnum.MD,
+    disabled: false,
+    loading: false,
   },
   argTypes: {
     disabled: {
@@ -92,6 +94,7 @@ export const UserClass: IStory = {
 }
 export const Loading: IStory = {
   ...options,
+
   render: args => (
     <WuButton {...args} loading>
       User class and style
