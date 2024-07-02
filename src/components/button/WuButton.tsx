@@ -1,4 +1,4 @@
-import {Home} from 'lucide-react'
+import {ReactNode} from 'react'
 import {Button} from '../../ui/button'
 import {WuSpinner} from '../spinner'
 import {EWuButtonIconPosition} from './types/EWuButtonIconPosition'
@@ -11,7 +11,7 @@ export interface IWuButtonProps
   loading?: boolean
   variant?: EWuButtonVariant
   size?: EWuButtonSize
-  icon?: string
+  icon?: ReactNode
   iconPosition?: EWuButtonIconPosition
 }
 export const WuButton: React.FC<IWuButtonProps> = ({
@@ -32,12 +32,12 @@ export const WuButton: React.FC<IWuButtonProps> = ({
       size={size}
     >
       {icon && iconPosition === EWuButtonIconPosition.LEFT && (
-        <Home className="mr-2" size={16} strokeWidth={1.5} />
+        <div className="mr-2">{icon}</div>
       )}
       {loading && <WuSpinner />}
       {!loading && children}
       {icon && iconPosition === EWuButtonIconPosition.RIGHT && (
-        <Home className="ml-2" size={16} strokeWidth={1.5} />
+        <div className="ml-2">{icon}</div>
       )}
     </Button>
   )

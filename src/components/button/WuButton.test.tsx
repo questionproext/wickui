@@ -1,10 +1,12 @@
 import '@testing-library/jest-dom/vitest'
 import {render, screen} from '@testing-library/react'
+import {Home} from 'lucide-react'
 import {describe, expect, it, vi} from 'vitest'
 import {WuButton} from './WuButton'
 import {EWuButtonIconPosition} from './types/EWuButtonIconPosition'
 import {EWuButtonVariant} from './types/EWuButtonVariant'
 
+const ICON = <Home size={16} strokeWidth={1.5} />
 describe('WuButton Render', () => {
   it('should render', () => {
     render(<WuButton>Hello</WuButton>)
@@ -33,19 +35,19 @@ describe('WuButton Render', () => {
     expect(btn).toBeDisabled()
   })
   it('should render the icon when icon is provided and iconPosition is left', () => {
-    render(<WuButton icon="home">Button text</WuButton>)
+    render(<WuButton icon={ICON}>Button text</WuButton>)
 
     const btn = screen.getByRole('button')
-    expect(btn.firstChild).toHaveClass('lucide')
+    expect(btn.firstChild?.firstChild).toHaveClass('lucide')
   })
   it('should render the icon when icon is provided and iconPosition is right', () => {
     render(
-      <WuButton icon="home" iconPosition={EWuButtonIconPosition.RIGHT}>
+      <WuButton icon={ICON} iconPosition={EWuButtonIconPosition.RIGHT}>
         Button text
       </WuButton>,
     )
     const btn = screen.getByRole('button')
-    expect(btn.lastChild).toHaveClass('lucide')
+    expect(btn.lastChild?.firstChild).toHaveClass('lucide')
   })
   it('should have background color when variant is primary', () => {
     render(<WuButton variant={EWuButtonVariant.PRIMARY}>Button text</WuButton>)

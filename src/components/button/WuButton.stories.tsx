@@ -1,5 +1,6 @@
 import type {Meta, StoryObj} from '@storybook/react'
 
+import {Home} from 'lucide-react'
 import React from 'react'
 import {WuButton} from './WuButton'
 import {EWuButtonIconPosition} from './types/EWuButtonIconPosition'
@@ -112,7 +113,7 @@ export const Loading: IStory = {
 export const WithIcon: IStory = {
   ...options,
   args: {
-    icon: 'home',
+    icon: <Home size={16} strokeWidth={1.5} />,
     iconPosition: EWuButtonIconPosition.LEFT,
   },
 
