@@ -13,8 +13,9 @@ export default defineConfig({
     sourcemap: true,
     lib: {
       entry: "src/index.ts",
-      name: "WickUI",
-      fileName: (format) => `index.${format}.js`,
+      name: "wickui",
+      fileName: (format) => `${format}/index.js`,
+      formats: ["es", "cjs"],
     },
     rollupOptions: {
       external: ["react", "react-dom"],
