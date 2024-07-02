@@ -1,19 +1,26 @@
+import {Home} from 'lucide-react'
 import {Button} from '../../ui/button'
 import {WuSpinner} from '../spinner'
-import {WuButtonSizeEnum} from './types/WuButtonSizeEnum'
-import {WuButtonVariantEnum} from './types/WuButtonVariantEnum'
+import {EWuButtonIconPosition} from './types/EWuButtonIconPosition'
+import {EWuButtonSize} from './types/EWuButtonSize'
+import {EWuButtonVariant} from './types/EWuButtonVariant'
+
 export interface IWuButtonProps
   extends React.HTMLAttributes<HTMLButtonElement> {
   disabled?: boolean
   loading?: boolean
-  variant?: WuButtonVariantEnum
-  size?: WuButtonSizeEnum
+  variant?: EWuButtonVariant
+  size?: EWuButtonSize
+  icon?: string
+  iconPosition?: EWuButtonIconPosition
 }
 export const WuButton: React.FC<IWuButtonProps> = ({
   disabled,
   loading,
-  variant = WuButtonVariantEnum.PRIMARY,
-  size = WuButtonSizeEnum.MD,
+  variant = EWuButtonVariant.PRIMARY,
+  size = EWuButtonSize.MD,
+  icon,
+  iconPosition,
   children,
   ...props
 }) => {
@@ -24,8 +31,14 @@ export const WuButton: React.FC<IWuButtonProps> = ({
       variant={variant}
       size={size}
     >
+      {icon && iconPosition === EWuButtonIconPosition.LEFT && (
+        <Home className="mr-2" size={16} strokeWidth={1.5} />
+      )}
       {loading && <WuSpinner />}
       {!loading && children}
+      {icon && iconPosition === EWuButtonIconPosition.RIGHT && (
+        <Home className="ml-2" size={16} strokeWidth={1.5} />
+      )}
     </Button>
   )
 }

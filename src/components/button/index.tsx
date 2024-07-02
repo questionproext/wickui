@@ -1,4 +1,5 @@
-export {WuButtonSizeEnum} from './types/WuButtonSizeEnum'
-export {WuButtonVariantEnum} from './types/WuButtonVariantEnum'
+export {EWuButtonIconPosition} from './types/EWuButtonIconPosition'
+export {EWuButtonSize} from './types/EWuButtonSize'
+export {EWuButtonVariant} from './types/EWuButtonVariant'
 export {WuButton} from './WuButton'
 export type {IWuButtonProps} from './WuButton'
