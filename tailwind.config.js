@@ -48,6 +48,19 @@ module.exports = {
         toolbar: {
           DEFAULT: 'hsl(0, 0%, 25%)',
         },
+        cx: {
+          500: 'hsl(148, 79%, 43%)',
+          100: 'hsl(148, 49%, 85%)',
+        },
+        essentials: {
+          500: 'hsl(322, 85%, 53%)',
+          100: 'hsl(322, 100%, 87%)',
+        },
+        'payme-orange': {
+          500: 'hsl(32, 100%, 48%)',
+          300: 'hsl(40, 100%, 48%)',
+          100: 'hsl(40, 100%, 72%)',
+        },
       },
       borderRadius: {
         lg: 'var(--radius) + 2px',
