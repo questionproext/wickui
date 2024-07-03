@@ -46,9 +46,7 @@ const capitalizedComponentName =
         export interface IWu${capitalizedComponentName}Props
           extends React.HTMLAttributes<HTMLBaseElement> {}
   
-        export const Wu${capitalizedComponentName}: React.FC<IWu${capitalizedComponentName}Props> = ({
-          ...props,
-        }) => {
+        export const Wu${capitalizedComponentName}: React.FC<IWu${capitalizedComponentName}Props> = () => {
           return (
             <div className={styles.container}>
               <h1>${capitalizedComponentName}</h1>
