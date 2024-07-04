@@ -1,4 +1,4 @@
-import {Toaster} from '../../ui/toaster'
+import {Toaster} from '@/ui/toaster'
 
 export const WuToast = () => {
   return <Toaster />

@@ -1,4 +1,4 @@
-import {useToast} from '../../../ui/use-toast'
+import {useToast} from '@/ui/use-toast'
 import {IWuToastOptions} from '../types/IWuToastOptions'
 
 export const useWuShowToast = (options?: IWuToastOptions) => {
