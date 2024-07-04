@@ -1,4 +1,5 @@
 import {WuSpinner} from '@/components/spinner'
+import {cn} from '@/lib/utils'
 import {Button} from '@/ui/button'
 import {ReactNode} from 'react'
 import {EWuButtonIconPosition} from './types/EWuButtonIconPosition'
@@ -13,6 +14,7 @@ export interface IWuButtonProps
   size?: EWuButtonSize
   icon?: ReactNode
   iconPosition?: EWuButtonIconPosition
+  floating?: boolean
 }
 export const WuButton: React.FC<IWuButtonProps> = ({
   disabled,
@@ -22,6 +24,8 @@ export const WuButton: React.FC<IWuButtonProps> = ({
   icon,
   iconPosition = EWuButtonIconPosition.LEFT,
   children,
+  floating,
+  className,
   ...props
 }) => {
   return (
@@ -30,6 +34,7 @@ export const WuButton: React.FC<IWuButtonProps> = ({
       disabled={disabled || loading}
       variant={variant}
       size={size}
+      className={cn(floating && 'shadow-xl', className)}
     >
       {icon && iconPosition === EWuButtonIconPosition.LEFT && (
         <div className="mr-2">{icon}</div>

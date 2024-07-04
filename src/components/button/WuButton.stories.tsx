@@ -21,6 +21,7 @@ const options: Partial<IStory> = {
     size: EWuButtonSize.MD,
     disabled: false,
     loading: false,
+    floating: false,
   },
   argTypes: {
     disabled: {
@@ -52,6 +53,11 @@ const options: Partial<IStory> = {
       options: Object.values(EWuButtonIconPosition),
       control: {
         type: 'select',
+      },
+    },
+    floating: {
+      control: {
+        type: 'boolean',
       },
     },
   },
