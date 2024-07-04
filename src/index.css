@@ -56,9 +56,6 @@
 @layer base {
   * {
     font-family: 'Open Sans', sans-serif;
-    @apply border-p-blue-400;
-  }
-  body {
-    @apply text-text;
+    @apply border-p-blue-400 text-text;
   }
 }
