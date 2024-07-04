@@ -102,13 +102,13 @@ export const Disabled: IStory = {
 export const UserClass: IStory = {
   ...options,
   args: {
+    ...options.args,
     className: 'bg-rose-300 text-rose-900',
   },
   render: args => <WuButton {...args}>User class and style</WuButton>,
 }
 export const Loading: IStory = {
   ...options,
-
   render: args => (
     <WuButton {...args} loading>
       User class and style
@@ -119,9 +119,32 @@ export const Loading: IStory = {
 export const WithIcon: IStory = {
   ...options,
   args: {
-    icon: <Home size={16} strokeWidth={1.5} />,
+    ...options.args,
+    icon: <Home size={16} strokeWidth={1.5} stroke="#fff" />,
     iconPosition: EWuButtonIconPosition.LEFT,
   },
 
   render: args => <WuButton {...args}>User class and style</WuButton>,
+}
+export const IconOnly: IStory = {
+  ...options,
+  args: {
+    ...options.args,
+    icon: <Home size={16} strokeWidth={1.5} stroke="#fff" />,
+    variant: EWuButtonVariant.ICON_ONLY,
+  },
+
+  render: args => <WuButton {...args}></WuButton>,
+}
+
+export const ActionButton: IStory = {
+  ...options,
+  args: {
+    ...options.args,
+    icon: <Home size={16} stroke="#fff" />,
+    iconPosition: EWuButtonIconPosition.LEFT,
+    floating: true,
+  },
+
+  render: args => <WuButton {...args} actionBtn></WuButton>,
 }

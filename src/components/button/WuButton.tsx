@@ -15,6 +15,7 @@ export interface IWuButtonProps
   icon?: ReactNode
   iconPosition?: EWuButtonIconPosition
   floating?: boolean
+  actionBtn?: boolean
 }
 export const WuButton: React.FC<IWuButtonProps> = ({
   disabled,
@@ -34,16 +35,17 @@ export const WuButton: React.FC<IWuButtonProps> = ({
       disabled={disabled || loading}
       variant={variant}
       size={size}
-      className={cn(floating && 'shadow-xl', className)}
-    >
-      {icon && iconPosition === EWuButtonIconPosition.LEFT && (
-        <div className="mr-2">{icon}</div>
+      className={cn(
+        floating && 'shadow-xl',
+        'flex items-center justify-center gap-2',
+        iconPosition === EWuButtonIconPosition.RIGHT && 'flex-row-reverse',
+        className,
       )}
+    >
+      {icon && <div>{icon}</div>}
+
       {loading && <WuSpinner />}
       {!loading && children}
-      {icon && iconPosition === EWuButtonIconPosition.RIGHT && (
-        <div className="ml-2">{icon}</div>
-      )}
     </Button>
   )
 }

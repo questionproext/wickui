@@ -4,4 +4,5 @@ export enum EWuButtonVariant {
   OUTLINE = 'outline',
   ROUNDED = 'rounded',
   LINK = 'link',
+  ICON_ONLY = 'icon-only',
 }
