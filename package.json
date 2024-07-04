@@ -1,7 +1,7 @@
 {
   "name": "@sifat160/wickui",
   "private": false,
-  "version": "0.4.0",
+  "version": "0.4.1",
   "description": "A React UI library for building web applications with ease.",
   "type": "module",
   "main": "./dist/wickui/umd/index.js",

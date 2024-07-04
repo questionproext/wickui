@@ -5,7 +5,7 @@ import {WuTooltip} from './WuTooltip'
 
 describe('WuTooltip', () => {
   it('should render', () => {
-    const {container} = render(<WuTooltip />)
+    const {container} = render(<WuTooltip content="test">test</WuTooltip>)
     expect(container.firstChild).toBeInTheDocument()
   })
 })
